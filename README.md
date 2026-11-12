@@ -62,3 +62,5 @@ In one step (Claude Code 2.1.275 or later):
 
 - The plugin: Apache License 2.0, see [`LICENSE`](LICENSE).
 - The vendored axe-core 4.14.0 (Deque Systems), in `plugins/site-design-system/scripts/vendor/axe-core/`: Mozilla Public License 2.0. See [`plugins/site-design-system/THIRD-PARTY.md`](plugins/site-design-system/THIRD-PARTY.md) and [`plugins/site-design-system/scripts/vendor/axe-core/LICENSE`](plugins/site-design-system/scripts/vendor/axe-core/LICENSE).
+
+X-Thought Labs: [xthoughtlabs.com](https://xthoughtlabs.com)
