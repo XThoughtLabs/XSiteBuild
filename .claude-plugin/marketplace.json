@@ -1,0 +1,14 @@
+{
+  "name": "xsitebuild",
+  "owner": {
+    "name": "XThoughtLabs"
+  },
+  "description": "Claude Code plugins from XThoughtLabs for building and checking websites with agents.",
+  "plugins": [
+    {
+      "name": "site-design-system",
+      "source": "./plugins/site-design-system",
+      "description": "The design system of any website, for agents: start one for a new site, derive one from an existing site's CSS, keep it in agreement with the CSS, and build and check pages, panels and images in it. Checkers trace DESIGN.md to the CSS, approve a profile by the owner's commit and render pages in a contained browser with axe-core."
+    }
+  ]
+}
