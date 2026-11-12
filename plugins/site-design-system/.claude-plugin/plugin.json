@@ -1,0 +1,15 @@
+{
+  "name": "site-design-system",
+  "version": "0.1.0",
+  "description": "The design system of any website, for agents: start one for a new site, derive one from an existing site's CSS, keep it in agreement with the CSS, and build and check pages, panels and images in it. Checkers trace DESIGN.md to the CSS, approve a profile by the owner's commit and render pages in a contained browser with axe-core.",
+  "author": {
+    "name": "Vladislav"
+  },
+  "keywords": [
+    "design system",
+    "DESIGN.md",
+    "css",
+    "accessibility",
+    "website"
+  ]
+}

@@ -1,0 +1,336 @@
+# run_mutants.py results (plugin site-design-system 0.1.0)
+KILLED    designlib.py     0.1.0  browser alpha tolerance widened | killed by tests/test_page_analysis.py::test_a2_extra_alpha_tolerance_boundary
+KILLED    designlib.py     0.1.0  short hex expanded wrongly | killed by tests/test_check_design.py::test_equivalent_spellings[#007-#000077]
+KILLED    designlib.py     0.1.0  large text boundary inclusive lost | killed by tests/test_check_design.py::test_large_text_boundary[24-400-True]
+KILLED    designlib.py     0.1.0  bold large text from weight 600 | killed by tests/test_check_design.py::test_large_text_boundary[19-600-False]
+KILLED    designlib.py     0.1.0  duplicate YAML keys accepted | killed by tests/test_check_design.py::test_duplicate_identical_keys_fail[policy]
+KILLED    designlib.py     0.1.0  YAML 1.1 booleans back | killed by tests/test_check_design.py::test_yaml_11_booleans_stay_strings
+KILLED    designlib.py     0.1.0  nesting limit off | killed by tests/test_check_design.py::test_too_large_and_too_deep_fail
+KILLED    designlib.py     0.1.0  alpha ignored in compositing | killed by tests/test_check_design.py::test_probe_ratios
+KILLED    designlib.py     0.1.0  FAIL does not decide the outcome | killed by tests/test_check_design.py::test_trace_controls_fail[swap of two colours]
+KILLED    csslite.py       0.1.0  unknown at-rule treated as non-binding | killed by tests/test_check_design.py::test_unsupported_at_rule_incomplete
+KILLED    csslite.py       0.1.0  statement at-rules ignored | killed by tests/test_check_design.py::test_statement_import_is_incomplete
+KILLED    csslite.py       0.1.0  media condition dropped | killed by tests/test_check_design.py::test_profiles_pass[build_x]
+KILLED    check_design.py  0.1.0  alias reference not compared | killed by tests/test_check_design.py::test_alias_token_changed_fails
+KILLED    check_design.py  0.1.0  variable binding always equal | killed by tests/test_check_design.py::test_trace_controls_fail[swap of two colours]
+KILLED    check_design.py  0.1.0  selector binding always equal | killed by tests/test_check_design.py::test_trace_controls_fail[radius set to a value existing elsewhere]
+KILLED    check_design.py  0.1.0  unbound token accepted | killed by tests/test_check_design.py::test_trace_controls_fail[new colour without a binding]
+KILLED    check_design.py  0.1.0  clamp maximum not compared | killed by tests/test_check_design.py::test_trace_controls_fail[fluid upper bound replaced by its lower bound]
+KILLED    check_design.py  0.1.0  token contrast threshold lowered | killed by tests/test_check_design.py::test_normal_text_needs_4_5
+KILLED    check_design.py  0.1.0  worse baseline accepted | killed by tests/test_check_design.py::test_baseline_kept_passes_and_worse_fails
+KILLED    check_design.py  0.1.0  floor section may be off | killed by tests/test_check_design.py::test_policy_controls_fail[floor off]
+KILLED    check_design.py  0.1.0  extras quote not required | killed by tests/test_check_design.py::test_policy_controls_fail[quote]
+KILLED    check_design.py  0.1.0  bare * waiver accepted | killed by tests/test_check_design.py::test_bad_waivers_fail[waiver0-bare *]
+KILLED    check_design.py  0.1.0  folder inside the deploy root accepted | killed by tests/test_check_design.py::test_boundary
+KILLED    check_design.py  0.1.0  uncommitted file approved | killed by tests/test_check_design.py::test_verify_writes_nothing_and_issue_needs_commit
+KILLED    check_design.py  0.1.0  hand-edited tokens.css accepted | killed by tests/test_check_design.py::test_design_first_hand_edit_fails
+KILLED    check_design.py  0.1.0  derived variable values unchecked | killed by tests/test_check_design.py::test_derived_variable_values
+KILLED    policylib.py     0.1.0  profile file change ignored | killed by tests/test_check_css.py::test_profile_change_without_git
+KILLED    policylib.py     0.1.0  CSS change ignored | killed by tests/test_check_css.py::test_missing_and_stale_receipt
+KILLED    policylib.py     0.1.0  plugin script change ignored | killed by tests/test_check_css.py::test_changed_plugin_script_or_font_makes_receipt_stale
+KILLED    policylib.py     0.1.0  commit re-check skipped | killed by tests/test_check_css.py::test_policy_committed_but_receipt_hand_edited
+KILLED    policylib.py     0.1.0  authored alpha matched with tolerance | killed by tests/test_check_css.py::test_authored_alpha_is_exact
+KILLED    policylib.py     0.1.0  waiver without the page hash | killed by tests/test_check_css.py::test_waiver_needs_the_page_hash
+KILLED    check_css.py     0.1.0  hard-coded var fallback accepted | killed by tests/test_check_css.py::test_declarations[.a { color: var(--ink, #1a1a2e); }-False]
+KILLED    check_css.py     0.1.0  token of another role accepted | killed by tests/test_check_css.py::test_declarations[.a { border-color: var(--accent); }-False]
+KILLED    check_css.py     0.1.0  reserved variable not floor | killed by tests/test_check_css.py::test_reserved_variable_is_floor
+KILLED    check_css.py     0.1.0  contract variable redefinition accepted | killed by tests/test_check_css.py::test_declarations[:root { --ink: #000000; } .a { color: var(--ink); }-False]
+KILLED    check_css.py     0.1.0  approved site CSS not recognised | killed by tests/test_check_css.py::test_linked_own_sheet_is_checked_and_site_css_is_approved
+KILLED    check_css.py     0.1.0  monospace allowed outside code | killed by tests/test_check_css.py::test_declarations[p { font-family: ui-monospace, Menlo, monospace; }-False]
+KILLED    check_css.py     0.1.0  extras of other roles admitted on backgrounds | killed by tests/test_check_css.py::test_declarations[.a { background-color: rgba(26, 26, 46, 0.08); }-False]
+KILLED    policylib.py     0.1.0  lengths taken for colours | killed by tests/test_check_css.py::test_declarations[.a { box-shadow: 0 1px 2px rgba(26, 26, 46, 0.08); }-True]
+KILLED    bundlelib.py     0.1.0  secret file names staged | killed by tests/test_page_analysis.py::test_closure_refuses_forbidden_names_in_any_component[.env/x.png]
+SURVIVED  bundlelib.py     0.1.0  links staged (POSIX only) | 2 skipped in 1.01s
+SURVIVED  check_page.py    0.1.0  no Content-Security-Policy | 1 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0  root renders without --run-as | 1 skipped in 0.23s
+SURVIVED  check_page.py    0.1.0  stale receipt still renders | 1 skipped in 0.24s
+SURVIVED  check_page.py    0.1.0  axe pins not checked before the run | 1 skipped in 0.20s
+KILLED    check_page.py    0.1.0  served font file not checked | killed by tests/test_page_analysis.py::test_a1_served_font_by_first_bytes
+SURVIVED  check_page.py    0.1.0  custom font name not checked | 1 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0  fallback font verdicts swapped | 8 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0  weight range not checked | 8 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0  downloaded monospace in code accepted | 8 skipped in 0.22s
+SURVIVED  check_page.py    0.1.0  reserved paint not floor | 1 skipped in 0.22s
+SURVIVED  check_page.py    0.1.0  accent share unlimited | 3 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0  fill area boundary inclusive | 4 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0  fill alpha threshold inclusive | 4 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0  forbidden text colours ignored | 1 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0  axe violations ignored | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0  overlap after an axe pass ignored | 7 skipped in 0.20s
+KILLED    check_page.py    0.1.0  fallback takes the best stop | killed by tests/test_page_analysis.py::test_translucent_text_over_a_gradient_fails_on_its_worst_sample
+SURVIVED  check_page.py    0.1.0  measure boundary inclusive | 3 skipped in 0.18s
+SURVIVED  pagejs.py        0.1.0  measure includes padding | 3 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0  single capital words flagged | 4 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0  scheme differences ignored | 1 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0  non-local references accepted | 1 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0  outside requests accepted | 1 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0  button count unlimited | 1 skipped in 0.20s
+KILLED    check_page.py    0.1.0  accessibility rules never blocking | killed by tests/test_page_analysis.py::test_a12_default_tier_applies_to_unlisted_rules
+SURVIVED  check_page.py    0.1.0  structure removals ignored | 9 skipped in 0.20s
+SURVIVED  pagejs.py        0.1.0  hidden entries counted as kept | 9 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0-r1 shadow DOM not reported | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r1 unchecked frames not reported | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r1 first-line repaint trusted | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r1 axe silence accepted | 2 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0-r1 axe inapplicable accepted | 2 skipped in 0.23s
+SURVIVED  check_page.py    0.1.0-r1 font style not checked | 1 skipped in 0.22s
+SURVIVED  check_page.py    0.1.0-r1 accent runs unlimited | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r1 partial non-approved font tolerated | 1 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0-r1 A1 in light renders only | 1 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0-r1 profile tiers replace the H3 defaults | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r1 no policy on error responses | 2 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0-r1 loopback rule last in the bypass list | 1 skipped in 0.23s
+KILLED    bundlelib.py     0.1.0-r1 hard links staged | killed by tests/test_page_analysis.py::test_closure_refuses_hard_links_and_profile_names_in_any_case
+KILLED    bundlelib.py     0.1.0-r1 profile names compared by case | killed by tests/test_page_analysis.py::test_closure_refuses_hard_links_and_profile_names_in_any_case
+KILLED    check_page.py    0.1.0-r1 truncation drops failures | killed by tests/test_page_analysis.py::test_report_truncation_keeps_failures_first
+SURVIVED  check_page.py    0.1.0-r1 both-scheme backgrounds not tokens | 1 skipped in 0.20s
+KILLED    policylib.py     0.1.0-r1 rollback to an older commit accepted | killed by tests/test_check_css.py::test_rollback_of_policy_and_receipt
+KILLED    policylib.py     0.1.0-r1 --no-git trusted with a repository | killed by tests/test_check_css.py::test_policy_and_receipt_edited_together
+KILLED    policylib.py     0.1.0-r1 Git failure read as no repository | killed by tests/test_check_css.py::test_git_failure_is_not_a_missing_repository
+KILLED    policylib.py     0.1.0-r1 reserved checked after role tokens | killed by tests/test_check_css.py::test_palette_refuses_reserved_first
+KILLED    check_design.py  0.1.0-r1 reserved token admitted by the policy | killed by tests/test_check_design.py::test_reserved_token_admitted_by_the_policy_fails[in roles]
+KILLED    check_design.py  0.1.0-r1 reserved colour admitted as an extra | killed by tests/test_check_design.py::test_reserved_colour_admitted_as_an_extra_fails
+KILLED    check_design.py  0.1.0-r1 --issue with overrides | killed by tests/test_check_design.py::test_issue_refuses_overrides
+KILLED    csslite.py       0.1.0-r1 escaped property names accepted | killed by tests/test_check_design.py::test_nesting_and_escaped_names_are_incomplete[escaped name]
+KILLED    check_css.py     0.1.0-r1 text paints unchecked | killed by tests/test_check_css.py::test_declarations[.a { -webkit-text-fill-color: #00ff00; }-False]
+SURVIVED  check_page.py    0.1.0-r1 page scripts pass silently (CEO R1-12: INCOMPLETE) | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r2 generated text trusted | 1 skipped in 0.19s
+SURVIVED  check_page.py    0.1.0-r2 generated text colour not in A5 | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r2 tab inside javascript: kept | 3 skipped in 0.18s
+SURVIVED  check_page.py    0.1.0-r2 meta refresh ignored | 3 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-r2 top-document rules run in frames | 1 skipped in 0.21s
+SURVIVED  check_page.py    0.1.0-r2 forced browser level unannounced | 1 skipped in 0.22s
+SURVIVED  check_page.py    0.1.0-r2 fonts budget ignored | 1 skipped in 0.21s
+SURVIVED  pagejs.py        0.1.0-r2 link URL read as a property | 1 skipped in 0.18s
+SURVIVED  pagejs.py        0.1.0-r2 form action read as a property | 1 skipped in 0.20s
+KILLED    csslite.py       0.1.0-r2 braces in strings taken for blocks | killed by tests/test_check_css.py::test_declarations[.q::before { content: "{"; color: var(--ink); }-True]
+KILLED    policylib.py     0.1.0-r2 untracked folder reported as a rollback | killed by tests/test_check_css.py::test_staged_copy_inside_another_repository
+SURVIVED  check_page.py    0.1.0-smoke layout containers measured | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-smoke inline-wrapped text not measured | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-smoke positioned marker counted as layout | 1 skipped in 0.21s
+KILLED    bundlelib.py     0.1.0-a1 AST-H01 forbidden name only in the last component | killed by tests/test_page_analysis.py::test_closure_refuses_forbidden_names_in_any_component[.env/x.png]
+KILLED    bundlelib.py     0.1.0-a1 AST-H01 profile bytes accepted | killed by tests/test_page_analysis.py::test_closure_refuses_a_copy_of_a_site_design_folder_file
+KILLED    check_page.py    0.1.0-a1 AST-H01 references read inside CSS comments | killed by tests/test_page_analysis.py::test_closure_ignores_urls_in_css_comments
+KILLED    check_css.py     0.1.0-a1 AST-H01 check_css reads refused files | killed by tests/test_check_css.py::test_linked_files_pass_the_guard_and_are_never_quoted[.env folder]
+KILLED    check_page.py    0.1.0-a1 AST-H02 staging reads the bundle again | killed by tests/test_page_analysis.py::test_staging_writes_the_bytes_the_closure_read
+SURVIVED  bundlelib.py     0.1.0-a1 AST-H02 linked folder followed (POSIX only) | 1 passed in 0.46s
+KILLED    bundlelib.py     0.1.0-a1 AST-H02 reparse point followed (Windows only) | killed by tests/test_page_analysis.py::test_closure_refuses_linked_folders
+KILLED    check_page.py    0.1.0-a1 AST-H03 paint change ignored | killed by tests/test_page_analysis.py::test_a6_paint_changed_during_checking_is_incomplete
+KILLED    check_page.py    0.1.0-a1 AST-H04 violations outside the runs dropped | killed by tests/test_page_analysis.py::test_a6_every_axe_violation_is_a_fail
+SURVIVED  pagejs.py        0.1.0-a1 AST-H04 display: contents text not a run | 1 skipped in 0.20s
+KILLED    check_page.py    0.1.0-a1 AST-H05 gradient stops only | killed by tests/test_page_analysis.py::test_a6_gradient_is_sampled_between_its_stops
+KILLED    check_page.py    0.1.0-a1 AST-H05 group compositing computed as text alpha | killed by tests/test_page_analysis.py::test_a6_faded_group_over_its_own_background_is_incomplete
+KILLED    check_page.py    0.1.0-a1 AST-H05 candidate budget silent | killed by tests/test_page_analysis.py::test_a6_candidate_budget_is_incomplete
+KILLED    check_page.py    0.1.0-a1 AST-H05 glyph paint read from color | killed by tests/test_page_analysis.py::test_a6_text_fill_paints_the_glyphs[none]
+KILLED    check_page.py    0.1.0-a1 AST-H05 size rounded before the large-text test | killed by tests/test_page_analysis.py::test_a6_large_text_size_is_not_rounded
+KILLED    check_page.py    0.1.0-a1 AST-H06 non-bundle font sources accepted | killed by tests/test_page_analysis.py::test_a1_font_sources_must_be_bundle_files[data]
+KILLED    check_page.py    0.1.0-a1 AST-H06 local() font sources accepted | killed by tests/test_page_analysis.py::test_a1_font_sources_must_be_bundle_files[local]
+KILLED    check_page.py    0.1.0-a1 AST-H06 fonts known by their suffix | killed by tests/test_page_analysis.py::test_a1_served_font_by_first_bytes
+KILLED    check_page.py    0.1.0-a1 AST-H06 approved name without its file | killed by tests/test_page_analysis.py::test_a1_approved_name_needs_its_approved_file_served
+KILLED    check_page.py    0.1.0-a1 AST-H06 empty platform-font data read | killed by tests/test_page_analysis.py::test_a1_empty_platform_font_data_is_incomplete
+KILLED    check_design.py  0.1.0-a1 AST-H06 face file hash unchecked | killed by tests/test_check_design.py::test_policy_schema[face hash]
+KILLED    policylib.py     0.1.0-a1 AST-H07 stops filtered by spelling | killed by tests/test_page_analysis.py::test_every_gradient_stop_is_kept[linear-gradient(to right, red 10%, hsl(0 100% 50%) 40%)-stops0]
+KILLED    check_page.py    0.1.0-a1 AST-H07 SVG stop elements not judged | killed by tests/test_page_analysis.py::test_a2_svg_stop_colour_is_a_gradient_stop
+KILLED    check_page.py    0.1.0-a1 AUD-F02 gradient without stops ignored | killed by tests/test_page_analysis.py::test_a2_gradient_without_a_readable_stop
+KILLED    check_css.py     0.1.0-a1 AST-H07 stop-color property ignored | killed by tests/test_check_css.py::test_every_gradient_stop_and_svg_paint_is_judged[svg stop attribute]
+KILLED    check_css.py     0.1.0-a1 AST-H07 SVG presentation attributes ignored | killed by tests/test_check_css.py::test_every_gradient_stop_and_svg_paint_is_judged[svg stop attribute]
+KILLED    policylib.py     0.1.0-a1 AST-H08 no fingerprint needed without a repository | killed by tests/test_check_css.py::test_repository_free_copy_needs_the_receipt_fingerprint
+KILLED    policylib.py     0.1.0-a1 AST-H08 fingerprint not compared | killed by tests/test_check_css.py::test_repository_free_copy_needs_the_receipt_fingerprint
+KILLED    policylib.py     0.1.0-a1 AST-H08 receipt schema unchecked | killed by tests/test_check_css.py::test_hand_written_receipt_on_a_repository_free_copy
+KILLED    policylib.py     0.1.0-a1 AST-M12 profile inventory unchecked | killed by tests/test_check_css.py::test_receipt_schema_before_any_file_is_read[unknown profile file]
+KILLED    policylib.py     0.1.0-a1 AST-M12 font inventory unchecked | killed by tests/test_check_css.py::test_receipt_schema_before_any_file_is_read[font outside the policy]
+KILLED    policylib.py     0.1.0-a1 AST-H09 consumer hashes the disk again | killed by tests/test_check_css.py::test_consumer_hashes_the_bytes_it_checked
+KILLED    check_design.py  0.1.0-a1 AST-H09 issue hashes the disk again | killed by tests/test_check_design.py::test_issue_hashes_the_bytes_it_checked
+KILLED    check_design.py  0.1.0-a1 AST-H08 inputs changed during the run issued | killed by tests/test_check_design.py::test_issue_refuses_inputs_changed_during_the_run
+KILLED    check_page.py    0.1.0-a1 AST-M02 srcdoc documents not read | killed by tests/test_page_analysis.py::test_closure_reads_nested_srcdoc_and_frames_met_as_files
+KILLED    check_page.py    0.1.0-a1 AST-M02 parsing deduplicated by path | killed by tests/test_page_analysis.py::test_closure_reads_nested_srcdoc_and_frames_met_as_files
+KILLED    check_page.py    0.1.0-a1 AST-M03 closure findings after the render only | killed by tests/test_page_analysis.py::test_closure_findings_are_reported_before_a_budget_stop
+KILLED    check_page.py    0.1.0-a1 AST-M03 killpg called where it does not exist | killed by tests/test_page_analysis.py::test_timeout_kills_without_killpg
+KILLED    check_design.py  0.1.0-a1 AST-M03 unwritable report not an error | killed by tests/test_check_design.py::test_unwritable_report_is_an_error
+KILLED    check_css.py     0.1.0-a1 AST-M03 unwritable report not an error (check_css) | killed by tests/test_check_css.py::test_outputs_and_their_errors
+KILLED    check_page.py    0.1.0-a1 AST-M03 unwritable report not an error (check_page) | killed by tests/test_page_analysis.py::test_closure_findings_are_reported_before_a_budget_stop
+KILLED    policylib.py     0.1.0-a1 AST-M04 outputs allowed inside the site design folder | killed by tests/test_check_design.py::test_outputs_are_refused_inside_the_site_design_folder
+KILLED    check_design.py  0.1.0-a1 AST-M04 linked ready.json written through | killed by tests/test_check_design.py::test_issue_refuses_a_ready_json_that_is_not_a_file
+KILLED    generate_css.py  0.1.0-a1 AST-M04 generator destination unchecked | killed by tests/test_check_design.py::test_generator_destinations_are_checked[inside the profile]
+KILLED    generate_css.py  0.1.0-a1 AST-M05 line ends not LF | killed by tests/test_check_design.py::test_generate_then_verify_on_the_written_bytes
+KILLED    check_design.py  0.1.0-a1 AST-M06 empty faces accepted | killed by tests/test_check_design.py::test_policy_schema[empty face list]
+KILLED    check_design.py  0.1.0-a1 AST-M06 coverage unchecked | killed by tests/test_check_design.py::test_policy_schema[no coverage]
+KILLED    check_design.py  0.1.0-a1 AST-M06 roles per scheme unchecked | killed by tests/test_check_design.py::test_policy_schema[empty roles]
+KILLED    check_design.py  0.1.0-a1 AST-M06 role tokens outside their set | killed by tests/test_check_design.py::test_policy_schema[role outside the set]
+KILLED    check_design.py  0.1.0-a1 AST-M06 incomplete pairs | killed by tests/test_check_design.py::test_policy_schema_both_schemes[pairs incomplete]
+KILLED    check_design.py  0.1.0-a1 AUD-F04 missing face file | killed by tests/test_check_design.py::test_policy_schema[face file]
+KILLED    check_design.py  0.1.0-a1 AST-M06 waiver hash untyped | killed by tests/test_check_design.py::test_waiver_fields_are_typed
+KILLED    check_design.py  0.1.0-a1 AST-M07 empty selector accepted | killed by tests/test_check_design.py::test_empty_bindings_fail[empty selector list]
+KILLED    check_design.py  0.1.0-a1 AST-M07 selector without property accepted | killed by tests/test_check_design.py::test_empty_bindings_fail[selector without property]
+KILLED    check_design.py  0.1.0-a1 AST-M07 empty binding accepted | killed by tests/test_check_design.py::test_empty_bindings_fail[empty field binding]
+KILLED    check_design.py  0.1.0-a1 AST-M07 empty vars accepted | killed by tests/test_check_design.py::test_empty_typography_vars_fail
+KILLED    check_design.py  0.1.0-a1 AST-M08 several declarations: the last one taken | killed by tests/test_check_design.py::test_several_declarations_of_one_binding_are_incomplete
+KILLED    check_design.py  0.1.0-a1 AST-M08 component family not compared | killed by tests/test_check_design.py::test_component_typography_is_compared_whole[family]
+KILLED    check_design.py  0.1.0-a1 AUD-F07 typography subset accepted | killed by tests/test_check_design.py::test_component_typography_subset_fails_even_when_inherited_values_match
+KILLED    check_design.py  0.1.0-a1 AST-M08 inherited chain not checked | killed by tests/test_check_design.py::test_inherited_component_typography_checks_the_chain
+KILLED    check_design.py  0.1.0-a1 AST-M08 design-first clamp maximum not compared | killed by tests/test_check_design.py::test_design_first_clamp_maximum_is_checked
+KILLED    check_design.py  0.1.0-a1 AST-M09 own background not among the surfaces accepted | killed by tests/test_check_design.py::test_literal_own_background_is_checked
+KILLED    check_design.py  0.1.0-a1 AST-M09 own background not checked | killed by tests/test_check_design.py::test_literal_own_background_is_checked
+KILLED    check_design.py  0.1.0-a1 AST-M09 largest fluid size used | killed by tests/test_check_design.py::test_fluid_component_text_uses_its_smallest_size
+KILLED    check_design.py  0.1.0-a1 AUD-F07 rem not converted | killed by tests/test_check_design.py::test_rem_component_size_is_converted
+KILLED    check_design.py  0.1.0-a1 AUD-F07 em size decided | killed by tests/test_check_design.py::test_em_component_size_is_undecided
+KILLED    check_design.py  0.1.0-a1 AUD-F07 alias not followed to its pair | killed by tests/test_check_design.py::test_dark_pair_follows_an_alias
+KILLED    check_design.py  0.1.0-a1 AUD-F08 baseline matched by names only | killed by tests/test_check_design.py::test_baseline_with_changed_surface_colour_fails
+KILLED    check_design.py  0.1.0-a1 AST-M10 derived values read by a colour regex | killed by tests/test_check_design.py::test_derived_variable_with_an_unknown_paint_fails
+KILLED    check_css.py     0.1.0-a1 AST-M10 certified variables redefined | killed by tests/test_check_css.py::test_page_variables_fallbacks_and_shorthands[non-colour variable redefined]
+KILLED    check_css.py     0.1.0-a1 AST-M11 only the last definition | killed by tests/test_check_css.py::test_page_variables_fallbacks_and_shorthands[every definition]
+KILLED    check_css.py     0.1.0-a1 AUD-F05 var() fallbacks not followed | killed by tests/test_check_css.py::test_page_variables_fallbacks_and_shorthands[reserved fallback]
+KILLED    check_css.py     0.1.0-a1 AUD-F05 no cycle guard | killed by tests/test_check_css.py::test_page_variables_fallbacks_and_shorthands[cycle]
+KILLED    check_css.py     0.1.0-a1 AST-M11 font shorthand ignored | killed by tests/test_check_css.py::test_page_variables_fallbacks_and_shorthands[font shorthand]
+KILLED    check_css.py     0.1.0-a1 AST-M11 frame documents not read | killed by tests/test_check_css.py::test_frame_documents_are_checked
+KILLED    check_css.py     0.1.0-a1 AST-M11 srcdoc documents not read | killed by tests/test_check_css.py::test_frame_documents_are_checked
+KILLED    check_page.py    0.1.0-a1 AST-M13 A7 from the bounding box | killed by tests/test_page_analysis.py::test_a7_reads_the_layout_width
+KILLED    check_page.py    0.1.0-a1 AST-M13 A4 from the bounding box | killed by tests/test_page_analysis.py::test_a4_reads_the_layout_area
+KILLED    check_page.py    0.1.0-a1 AST-M14 A8 in light renders only | killed by tests/test_page_analysis.py::test_a8_runs_in_dark_renders
+KILLED    check_page.py    0.1.0-a1 AST-M14 A9 ignores presence | killed by tests/test_page_analysis.py::test_a9_compares_presence
+KILLED    check_page.py    0.1.0-a1 AST-M14 A11 in the light desktop render only | killed by tests/test_page_analysis.py::test_a11_counts_the_dark_desktop_render
+KILLED    check_design.py  0.1.0-a1 AST-M15 unknown axe tags accepted | killed by tests/test_check_design.py::test_policy_schema[unknown axe tag]
+KILLED    check_page.py    0.1.0-a1 AST-M15 A12 without execution evidence | killed by tests/test_page_analysis.py::test_a12_needs_execution_evidence
+SURVIVED  check_page.py    0.1.0-a1 AST-M15 A12 in light renders only | 1 skipped in 0.20s
+KILLED    check_page.py    0.1.0-a1 AST-M16 snapshot coverage not required | killed by tests/test_page_analysis.py::test_a13_snapshot_schema[incomplete coverage]
+KILLED    check_page.py    0.1.0-a1 AST-M16 snapshot schema not checked | killed by tests/test_page_analysis.py::test_a13_snapshot_schema[bare]
+SURVIVED  pagejs.py        0.1.0-a1 AST-M16 fields by subtree, not ownership | 2 skipped in 0.19s
+KILLED    designlib.py     0.1.0-a1 AST-M17 hex alpha rounded | killed by tests/test_check_design.py::test_hex_alpha_is_exact
+KILLED    check_page.py    0.1.0-a1 AST-M18 a budget per attempt | killed by tests/test_page_analysis.py::test_one_deadline_for_every_attempt
+KILLED    check_page.py    0.1.0-a1 AST-M18 result written before it is bounded | killed by tests/test_page_analysis.py::test_child_result_is_bounded_before_it_is_written
+KILLED    check_page.py    0.1.0-a1 AST-M18 no slot for the truncation item | killed by tests/test_page_analysis.py::test_report_truncation_keeps_a_slot
+KILLED    policylib.py     0.1.0-a1 AST-M19 tolerance boundary exclusive | killed by tests/test_page_analysis.py::test_a2_extra_alpha_tolerance_boundary
+KILLED    check_page.py    0.1.0-a1 AST-M21 any mode accepted | killed by tests/test_page_analysis.py::test_child_refuses_a_job_it_did_not_get_from_the_parent[mode]
+KILLED    check_page.py    0.1.0-a1 AST-M21 job folders unchecked | killed by tests/test_page_analysis.py::test_child_refuses_a_job_it_did_not_get_from_the_parent[stage elsewhere]
+KILLED    check_page.py    0.1.0-a1 AST-L01 A6 summary a PASS | killed by tests/test_page_analysis.py::test_a6_summary_is_info_and_findings_keep_their_render
+KILLED    check_page.py    0.1.0-a1 AST-L01 findings deduplicated without the render | killed by tests/test_page_analysis.py::test_a6_summary_is_info_and_findings_keep_their_render
+KILLED    check_page.py    0.1.0-a1 AST-L01 A12 summary a PASS | killed by tests/test_page_analysis.py::test_a12_needs_execution_evidence
+KILLED    check_css.py     0.1.0-a1 AST-L02 report by colour regex | killed by tests/test_check_css.py::test_report_reads_every_colour_form_and_keyframes
+KILLED    check_css.py     0.1.0-a1 AST-L02 keyframes not reported | killed by tests/test_check_css.py::test_report_reads_every_colour_form_and_keyframes
+KILLED    inventory_css.py 0.1.0-a1 AST-L02 longhands not inventoried | killed by tests/test_tools.py::test_inventory_lists_longhands
+SURVIVED  pagejs.py        0.1.0-a1 AUD-F01 painting descendants ignored | 1 skipped in 0.21s
+KILLED    check_page.py    0.1.0-a1 AUD-F01 axe pass trusted over the glyph paint | killed by tests/test_page_analysis.py::test_a6_text_fill_paints_the_glyphs[pass]
+KILLED    check_page.py    0.1.0-a1 AUD-F01 A5 ignores SVG fill | killed by tests/test_page_analysis.py::test_a6_and_a5_svg_text_use_fill
+KILLED    check_page.py    0.1.0-a1 AUD-F01 SVG glyph paint read from color | killed by tests/test_page_analysis.py::test_a6_and_a5_svg_text_use_fill
+KILLED    bundlelib.py     0.1.0-a1 AUD-F03 last duplicate attribute wins | killed by tests/test_page_analysis.py::test_first_of_duplicate_attributes_wins
+KILLED    bundlelib.py     0.1.0-a1 AUD-F03 references not percent-decoded | killed by tests/test_check_css.py::test_percent_encoded_link_names_the_file_the_browser_gets
+KILLED    check_design.py  0.1.0-a1 AUD-F06 colour fields untyped | killed by tests/test_check_design.py::test_component_fields_are_typed[dimension as textColor]
+KILLED    check_design.py  0.1.0-a1 AUD-F06 dimension fields untyped | killed by tests/test_check_design.py::test_component_fields_are_typed[colour as rounded]
+KILLED    check_design.py  0.1.0-a1 AUD-F06 unreadable site CSS internal | killed by tests/test_check_design.py::test_unbalanced_site_css_is_an_error
+KILLED    check_design.py  0.1.0-a1 AUD-F09 A12 accepted as an assertion tier | killed by tests/test_check_design.py::test_policy_schema[A12 tier]
+KILLED    check_design.py  0.1.0-a1 AUD-F09 accessibility tier values unchecked | killed by tests/test_check_design.py::test_policy_schema[accessibility tier]
+KILLED    check_css.py     0.1.0-a1 AUD-F10 style attribute without its tag | killed by tests/test_check_css.py::test_code_style_attribute_is_a_code_role
+KILLED    generate_css.py  0.1.0-a1 AUD-F11 content errors internal | killed by tests/test_check_design.py::test_generator_errors_are_error_2
+KILLED    check_design.py  0.1.0-a1 AUD-F12 component stylesheets not loaded (issue) | killed by tests/test_check_design.py::test_component_stylesheets_are_loaded_and_hashed
+KILLED    policylib.py     0.1.0-a1 AUD-F12 component stylesheets not in the consumer's inventory | killed by tests/test_check_design.py::test_component_stylesheets_are_loaded_and_hashed
+KILLED    designlib.py     0.1.0-a2 V3 a list made on any comma | killed by tests/test_check_design.py::test_commas_inside_a_function_are_one_value[repeat(3, 1fr)]
+KILLED    check_page.py    0.1.0-a2 V4 paint comparison limited to the text's ancestors | killed by tests/test_page_analysis.py::test_a6_paint_change_of_a_non_ancestor_is_incomplete
+KILLED    pagejs.py        0.1.0-a2 C2 offsets and margins left out of PAINTS | killed by tests/test_page_analysis.py::test_paint_list_holds_offsets_and_margins
+SURVIVED  pagejs.py        0.1.0-a2 C3 fields from form.elements alone | 2 skipped in 0.21s
+KILLED    check_page.py    0.1.0-a2 C4 result written to any path | killed by tests/test_page_analysis.py::test_refused_job_writes_nothing_outside_its_staging_folder[unknown mode]
+KILLED    bundlelib.py     0.1.0-a2 C5 control character in a reference followed | killed by tests/test_page_analysis.py::test_control_character_in_a_reference_is_outside_the_bundle[NUL]
+KILLED    check_css.py     0.1.0-a2 C6 no expansion budget | killed by tests/test_check_css.py::test_variable_definitions_have_a_budget[8]
+KILLED    check_css.py     0.1.0-a2 C6 report not capped | killed by tests/test_check_css.py::test_report_keeps_at_most_5000_items_failures_first
+KILLED    check_css.py     0.1.0-a2 C7 font-stack variable in a shorthand not read | killed by tests/test_check_css.py::test_font_shorthand_with_a_font_stack_variable[stack variable]
+KILLED    check_css.py     0.1.0-a2 C7 another var() in the shorthand accepted | killed by tests/test_check_css.py::test_font_shorthand_with_a_font_stack_variable[variable line height]
+KILLED    bundlelib.py     0.1.0-a3 R2-H01 trailing dot and space rule removed | killed by tests/test_page_analysis.py::test_windows_aliases_are_outside_the_bundle[vault.key.]
+KILLED    bundlelib.py     0.1.0-a3 R2-H01 colon rule removed | killed by tests/test_page_analysis.py::test_windows_aliases_are_outside_the_bundle[./vault.key::$DATA]
+KILLED    check_page.py    0.1.0-a3 R2-H04 requested path logged in place of the staged key | killed by tests/test_page_analysis.py::test_server_refuses_a_request_that_is_not_a_canonical_staged_key[encoded slash and dot]
+KILLED    check_page.py    0.1.0-a3 R2-M12 inventory check removed | killed by tests/test_page_analysis.py::test_server_serves_only_the_inventory_with_its_digest
+KILLED    check_page.py    0.1.0-a3 R2-M12 digest check removed | killed by tests/test_page_analysis.py::test_server_serves_only_the_inventory_with_its_digest
+KILLED    check_page.py    0.1.0-a3 R2-M01 bundle root reopened by path for each read | killed by tests/test_page_analysis.py::test_closure_root_replaced_between_reads_is_refused
+KILLED    policylib.py     0.1.0-a3 R2-M02 attribute check removed (consumer) | killed by tests/test_check_css.py::test_ident_attribute_is_incomplete
+KILLED    check_design.py  0.1.0-a3 R2-M02 attribute check removed (issue) | killed by tests/test_check_design.py::test_issue_refuses_a_path_whose_attributes_change_content
+KILLED    policylib.py     0.1.0-a3 R2-M02 hash-object --path restored (a filter runs) | killed by tests/test_check_css.py::test_a_configured_clean_filter_is_never_run_by_the_consumer
+KILLED    policylib.py     0.1.0-a3 R2-M02 line ends not normalised | killed by tests/test_check_css.py::test_crlf_working_copy_of_an_lf_blob_is_fresh
+KILLED    policylib.py     0.1.0-a3 R2-H06 receipt's committed-blob check removed | killed by tests/test_check_css.py::test_issue_then_commit_the_receipt_passes
+SURVIVED  pagejs.py        0.1.0-a3 R2-H02 marker attribute set again | 1 skipped in 0.20s
+SURVIVED  check_page.py    0.1.0-a3 R2-H02 viewport grown again | 1 skipped in 0.19s
+KILLED    check_page.py    0.1.0-a3 R2-H02 per-scroll comparison removed (renderer) | killed by tests/test_page_analysis.py::test_render_compares_paints_at_every_scroll_position
+KILLED    check_page.py    0.1.0-a3 R2-H02 per-scroll comparison removed (analysis) | killed by tests/test_page_analysis.py::test_paint_change_at_a_scroll_position_makes_the_frame_incomplete
+KILLED    check_page.py    0.1.0-a3 R2-H02 frame-backdrop rule removed | killed by tests/test_page_analysis.py::test_child_frame_text_without_an_opaque_backdrop_is_incomplete
+SURVIVED  pagejs.py        0.1.0-a3 R2-H02 scale left out of PAINTS | 2 skipped in 0.20s
+SURVIVED  pagejs.py        0.1.0-a3 R2-H02 pointer-events none layers not seen | 6 skipped in 0.20s
+KILLED    check_page.py    0.1.0-a3 R2-H02 axe verdict taken outside the viewport | killed by tests/test_page_analysis.py::test_merge_axe_takes_each_node_where_its_element_was_inside
+KILLED    check_page.py    0.1.0-a3 R2-H03 fill-opacity not composed | killed by tests/test_page_analysis.py::test_svg_text_fill_opacity_is_composed
+KILLED    check_page.py    0.1.0-a3 R2-H03 interval bound replaced by the samples | killed by tests/test_page_analysis.py::test_gradient_below_the_threshold_between_samples_fails
+KILLED    check_page.py    0.1.0-a3 R2-H05 paint-server fallback skipped | killed by tests/test_page_analysis.py::test_a2_paint_server_fallback_is_judged
+KILLED    check_page.py    0.1.0-a3 R2-H05 unreadable colour skipped | killed by tests/test_page_analysis.py::test_a2_colours_the_parser_did_not_read[display-p3]
+KILLED    check_page.py    0.1.0-a3 R2-H05 unreadable background dropped | killed by tests/test_page_analysis.py::test_a2_colours_the_parser_did_not_read[display-p3]
+KILLED    check_page.py    0.1.0-a3 R2-M10 drift branch first again | killed by tests/test_page_analysis.py::test_named_violation_stays_fail_when_the_frame_changed
+KILLED    check_page.py    0.1.0-a3 R2-M10 oversized result drops its evidence | killed by tests/test_page_analysis.py::test_oversized_result_keeps_bounded_a10_evidence
+KILLED    check_page.py    0.1.0-a3 R2-M08 missing frame result skipped | killed by tests/test_page_analysis.py::test_a12_frame_without_a_result_is_incomplete
+KILLED    check_page.py    0.1.0-a3 R2-M08 rule coverage not compared | killed by tests/test_page_analysis.py::test_a12_result_lacking_an_expected_rule_is_incomplete
+KILLED    check_page.py    0.1.0-a3 R2-M08 default tier ignored | killed by tests/test_page_analysis.py::test_a12_default_tier_applies_to_unlisted_rules
+SURVIVED  pagejs.py        0.1.0-a3 R2-M09 C3 union restored | 1 skipped in 0.20s
+KILLED    check_page.py    0.1.0-a3 R2-M09 snapshot digest check removed | killed by tests/test_page_analysis.py::test_a13_kept_snapshot_needs_its_sha256[absent]
+KILLED    check_css.py     0.1.0-a3 R2-M04 early resolver truncating silently again | killed by tests/test_check_css.py::test_early_resolver_spends_the_budget
+KILLED    check_css.py     0.1.0-a3 R2-M04 per-document maps merged | killed by tests/test_check_css.py::test_variables_are_collected_per_document
+KILLED    check_css.py     0.1.0-a3 R2-M04 color-mix operand fallback unchecked | killed by tests/test_check_css.py::test_fallback_inside_a_color_mix_operand_is_validated
+KILLED    check_css.py     0.1.0-a3 R2-L01 rounding restored | killed by tests/test_check_css.py::test_color_mix_is_not_rounded_into_a_token
+KILLED    check_css.py     0.1.0-a3 R2-L03 total dropped | killed by tests/test_check_css.py::test_report_mode_truncation_keeps_the_total
+KILLED    check_page.py    0.1.0-a3 R2-M11 string rule removed | killed by tests/test_page_analysis.py::test_url_inside_a_css_string_is_not_a_reference
+KILLED    check_page.py    0.1.0-a3 R2-M11 template content followed | killed by tests/test_page_analysis.py::test_template_content_is_not_followed
+KILLED    check_page.py    0.1.0-a3 R2-M11 SVG files not scanned | killed by tests/test_page_analysis.py::test_svg_file_of_the_closure_is_scanned_for_scripts
+KILLED    check_design.py  0.1.0-a3 R2-M05 16 px restored | killed by tests/test_check_design.py::test_rem_uses_the_root_font_size_the_site_sets
+KILLED    check_design.py  0.1.0-a3 R2-M05 overrides left out | killed by tests/test_check_design.py::test_smaller_override_size_is_used
+KILLED    check_design.py  0.1.0-a3 R2-M05 uncertain root not strict | killed by tests/test_check_design.py::test_uncertain_root_size_takes_the_stricter_threshold
+KILLED    check_design.py  0.1.0-a3 R2-M06 shape check removed for fonts.faces | killed by tests/test_check_design.py::test_face_of_the_wrong_type_is_a_policy_failure
+KILLED    check_design.py  0.1.0-a3 R2-M06 whole shape not checked first | killed by tests/test_check_design.py::test_every_wrong_type_in_the_policy_is_a_named_failure
+KILLED    check_design.py  0.1.0-a3 R2-M06 button paint tokens unchecked | killed by tests/test_check_design.py::test_unknown_button_paint_token_is_a_policy_failure
+KILLED    check_design.py  0.1.0-a3 R2-M07 stack values unchecked | killed by tests/test_check_design.py::test_font_stack_variable_with_an_unapproved_family_fails
+KILLED    check_css.py     0.1.0-a3 R2-M07 uncertified stack accepted by check_css | killed by tests/test_check_css.py::test_uncertified_font_stack_variable_is_not_accepted
+KILLED    check_design.py  0.1.0-a3 R2-M07 union of roles restored | killed by tests/test_check_design.py::test_derived_value_is_checked_for_each_role
+KILLED    check_design.py  0.1.0-a3 R2-M13 check limited to the bound variable again | killed by tests/test_check_design.py::test_ambiguity_through_the_dependency_graph
+KILLED    csslite.py       0.1.0-a3 R2-M13 importance not kept | killed by tests/test_check_design.py::test_ambiguity_through_the_dependency_graph
+KILLED    generate_css.py  0.1.0-a3 R2-M13 typography-only transition restored | killed by tests/test_check_design.py::test_component_stylesheet_field_binds_to_its_selector
+KILLED    designlib.py     0.1.0-a3 R2-M03 existing-name check removed | killed by tests/test_page_analysis.py::test_report_through_a_hard_link_is_refused
+KILLED    check_page.py    0.1.0-a3 R2-L02 result left out of the artefact budget | killed by tests/test_page_analysis.py::test_result_counts_in_the_artefact_budget
+KILLED    check_page.py    0.1.0-a3 R2-L02 deadline started after staging | killed by tests/test_page_analysis.py::test_deadline_counts_from_before_staging
+KILLED    check_page.py    0.1.0-a4 W1 preference comparison removed (renderer) | killed by tests/test_page_analysis.py::test_preference_changes_compare_each_frame_with_the_first_read
+KILLED    check_page.py    0.1.0-a4 W1 frame list not compared | killed by tests/test_page_analysis.py::test_preference_changes_compare_each_frame_with_the_first_read
+KILLED    check_page.py    0.1.0-a4 W1 preference changes ignored (analysis) | killed by tests/test_page_analysis.py::test_a6_text_painted_differently_for_another_preference_is_incomplete
+KILLED    check_page.py    0.1.0-a4 W1 reduced-motion state left out | killed by tests/test_page_analysis.py::test_preference_states_are_every_other_combination
+KILLED    check_page.py    0.1.0-a4 W1 state not in effect accepted | killed by tests/test_page_analysis.py::test_a6_preference_state_without_evidence_is_incomplete[state not in effect]
+KILLED    check_page.py    0.1.0-a4 W1 evidence state not checked | killed by tests/test_page_analysis.py::test_a6_preference_state_without_evidence_is_incomplete[evidence state not in effect]
+KILLED    check_page.py    0.1.0-a4 W1 states missing from the record not counted | killed by tests/test_page_analysis.py::test_a6_preference_state_without_evidence_is_incomplete[state not loaded]
+KILLED    check_page.py    0.1.0-a4 W1 missing record accepted | killed by tests/test_page_analysis.py::test_a6_render_without_a_preference_record_is_incomplete
+KILLED    check_design.py  0.1.0-a4 fallback families ignored (check_design) | killed by tests/test_check_design.py::test_font_stack_with_listed_fallback_families_is_certified
+KILLED    check_css.py     0.1.0-a4 fallback families ignored (check_css) | killed by tests/test_check_css.py::test_font_stack_with_listed_fallback_families_is_accepted
+KILLED    check_design.py  0.1.0-a4 fallback families shape unchecked | killed by tests/test_check_design.py::test_fallback_families_of_the_wrong_type_is_a_policy_failure[integer]
+KILLED    pagejs.py        0.1.0-a5 X1 box-shadow left out of the paint list | killed by tests/test_page_analysis.py::test_every_comparison_reads_one_paint_list
+KILLED    pagejs.py        0.1.0-a5 X1 background-size left out of the paint list | killed by tests/test_page_analysis.py::test_every_comparison_reads_one_paint_list
+KILLED    check_page.py    0.1.0-a5 X1 box comparison removed | killed by tests/test_page_analysis.py::test_fresh_load_differing_in_one_border_box_alone_changes_the_frame
+KILLED    check_page.py    0.1.0-a5 X2 shadow check removed | killed by tests/test_page_analysis.py::test_a6_paint_hit_testing_never_sees_under_the_text_is_incomplete[sibling outer spread]
+KILLED    check_page.py    0.1.0-a5 X2 own-box exclusion widened to every element (every reached run excluded) | killed by tests/test_page_analysis.py::test_shadow_reach_inset_of_an_ancestor_and_outer_reaching_or_not
+KILLED    check_page.py    0.1.0-a5 X2 blur and spread left out of the reach | killed by tests/test_page_analysis.py::test_shadow_reach_inset_of_an_ancestor_and_outer_reaching_or_not
+KILLED    check_page.py    0.1.0-a5 X2 inset shadows not counted (an ancestor's or a padding box's) | killed by tests/test_page_analysis.py::test_shadow_reach_inset_of_an_ancestor_and_outer_reaching_or_not
+KILLED    check_page.py    0.1.0-a5 X2 outline not judged | killed by tests/test_page_analysis.py::test_a6_paint_hit_testing_never_sees_under_the_text_is_incomplete[sibling outline]
+KILLED    check_page.py    0.1.0-a5 X2 unmeasured painter taken as not reaching | killed by tests/test_page_analysis.py::test_a6_paint_hit_testing_never_sees_under_the_text_is_incomplete[not measured]
+KILLED    check_page.py    0.1.0-a5 X2 drop-shadow and blur filters ignored | killed by tests/test_page_analysis.py::test_a6_paint_whose_reach_is_not_computed_is_incomplete[blur over a child]
+KILLED    check_page.py    0.1.0-a5 X2 transformed painter measured as if untransformed | killed by tests/test_page_analysis.py::test_a6_paint_whose_reach_is_not_computed_is_incomplete[transformed shadow]
+KILLED    check_page.py    0.1.0-a5 ancestor filter accepted with an axe pass | killed by tests/test_page_analysis.py::test_a6_axe_pass_under_an_ancestor_filter_is_incomplete[filter-brightness(0.15)]
+KILLED    check_css.py     0.1.0-a5 literal stacks ignoring fonts.fallback_families | killed by tests/test_check_css.py::test_literal_font_stack_with_listed_fallback_families_is_accepted
+KILLED    check_design.py  0.1.0-a6 first-face condition dropped for stack variables (check_design) | killed by tests/test_check_design.py::test_font_stack_variable_needs_an_approved_face_first[listed fallback first]
+KILLED    check_css.py     0.1.0-a6 first-face condition dropped for stack variables (check_css) | killed by tests/test_check_css.py::test_every_font_stack_needs_an_approved_face_first[listed fallback first]
+KILLED    check_page.py    0.1.0-a6 U2 band composed without its alpha | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_that_keep_the_contrast_pass[ink text over its own underline]
+KILLED    check_page.py    0.1.0-a6 U2 only the first of several bands composed | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_are_composed_into_the_backdrop[shadow_stack]
+KILLED    check_page.py    0.1.0-a6 U2 combinations reduced to the plain backdrop and all bands | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_are_composed_into_the_backdrop[an ancestor's band where the run's own band does not cover it]
+KILLED    check_page.py    0.1.0-a6 U2 paint order of an element's layers reversed | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_are_composed_into_the_backdrop[paper band painted over a dark one (paint order)]
+KILLED    check_page.py    0.1.0-a6 U2 blurred band composed as solid | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_not_composed_are_incomplete[a blurred own band]
+KILLED    check_page.py    0.1.0-a6 U2 a non-ancestor's band taken as composed | killed by tests/test_page_analysis.py::test_a6_paint_hit_testing_never_sees_under_the_text_is_incomplete[sibling solid inset band]
+KILLED    check_page.py    0.1.0-a6 U2 band not counted as a painted background (group opacity) | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_not_composed_are_incomplete[a faded painter of a band]
+KILLED    check_page.py    0.1.0-a6 U2 any number of band groups composed | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_not_composed_are_incomplete[five band shapes]
+KILLED    check_page.py    0.1.0-a6 U1 filter reach replaced by the whole frame | killed by tests/test_page_analysis.py::test_a6_blur_or_drop_shadow_counts_only_near_itself[outside]
+KILLED    check_page.py    0.1.0-a6 U1 blur reach without the factor 3 | killed by tests/test_page_analysis.py::test_filter_reach_grows_three_deviations_and_moves_with_a_drop_shadow
+KILLED    check_page.py    0.1.0-a6 U1 drop-shadow offset ignored | killed by tests/test_page_analysis.py::test_filter_reach_grows_three_deviations_and_moves_with_a_drop_shadow
+KILLED    check_page.py    0.1.0-a6 U1 filtered element with content taken as bounded | killed by tests/test_page_analysis.py::test_a6_paint_whose_reach_is_not_computed_is_incomplete[blur over a child]
+KILLED    check_page.py    0.1.0-a6 U1 unknown filter function taken as a colour function | killed by tests/test_page_analysis.py::test_filter_functions_are_read_or_refused
+KILLED    check_page.py    0.1.0-a6 U2 negative z-index layer beneath the band ignored | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_not_composed_are_incomplete[text in a negative layer beneath the band]
+KILLED    check_page.py    0.1.0-a6 U2 animated band composed | killed by tests/test_page_analysis.py::test_a6_solid_shadow_bands_not_composed_are_incomplete[an animated band]
+KILLED    check_page.py    0.1.0-a6 U1 animated filter taken as still | killed by tests/test_page_analysis.py::test_a6_animated_blur_is_never_taken_as_still
+KILLED    check_page.py    0.1.0-a6 U1 list item's marker ignored | killed by tests/test_page_analysis.py::test_a6_paint_whose_reach_is_not_computed_is_incomplete[blur of a list item]
+SURVIVED  pagejs.py        0.1.0-a6 U1, U2 animations not recorded (browser only) | 3 skipped in 0.19s
+SURVIVED  pagejs.py        0.1.0-a6 U2 z-index not read (browser only) | 3 skipped in 0.18s
+SURVIVED  pagejs.py        0.1.0-a6 U1 filtered elements not measured (browser only) | 2 skipped in 0.18s
+mutants 334: KILLED 269, SURVIVED 65; 174 s
